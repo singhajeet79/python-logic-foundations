@@ -1,10 +1,5 @@
-
-# grid_tasks.py
-
 def generate_chess_grid(n):
     """
-    TaskPY200_T5: Chessboard with Numbers
-    Rules: 
     - If row == col -> 'X'
     - Else if (row + col) is even -> '1'
     - Else -> '0'
@@ -22,4 +17,10 @@ def generate_chess_grid(n):
         grid.append(" ".join(row_data))
     return "\n".join(grid)
 
+val = input("Enter N for the grid size: ")
+n = int(val)
 
+if n < 0:
+   print("Enter a positive integer!")
+result = generate_chess_grid(n)
+print(result)
